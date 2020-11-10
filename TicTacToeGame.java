@@ -41,6 +41,17 @@ public class TicTacToeGame {
 
 	}
 
+	// UC3 : SHOW THE CURRENT BOARD
+	public static void showBoard(char[] board) {
+		System.out.println("|---|---|---|");
+		System.out.println("| " + board[0] + " | " + board[1] + " | " + board[2] + " |");
+		System.out.println("|-----------|");
+		System.out.println("| " + board[3] + " | " + board[4] + " | " + board[5] + " |");
+		System.out.println("|-----------|");
+		System.out.println("| " + board[6] + " | " + board[7] + " | " + board[8] + " |");
+		System.out.println("|---|---|---|");
+	}
+
 	// MAIN METHOD
 	public static void main(String[] args) {
 		System.out.println("       Welcome to Tic Tac Toe      ");
@@ -49,13 +60,14 @@ public class TicTacToeGame {
 		char[] intializedBoard = initializeBoard();
 		// CALLING METHOD FOR THE PURPOSE OF UC2
 		int userChoice = haveYourChoice1();
-		if (userChoice == 1) {
+		if (userChoice == 0) {
 			System.out.println("Computer choice is " + 'X');
 		} else {
 			System.out.println("Computer choice is " + 'O');
 
 		}
+		// CALLING METHOD FOR THE PURPOSE OF UC3
+		showBoard(intializedBoard);
 	}
 
 }
-
