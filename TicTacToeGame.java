@@ -52,6 +52,19 @@ public class TicTacToeGame {
 		System.out.println("|---|---|---|");
 	}
 
+	// UC4 : CHECK PLACE IS AVAILABLE TO INSERT OR NOT
+	public static void checkAvalabilityAndInsert(char[] board) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter positon where you want to insert");
+		int position = sc.nextInt();
+		if (board[position] == 32 && position > 0 && position < board.length) {
+			System.out.println("available");
+		} else {
+			System.out.println("occupied");
+		}
+
+	}
+
 	// MAIN METHOD
 	public static void main(String[] args) {
 		System.out.println("       Welcome to Tic Tac Toe      ");
@@ -68,6 +81,8 @@ public class TicTacToeGame {
 		}
 		// CALLING METHOD FOR THE PURPOSE OF UC3
 		showBoard(intializedBoard);
+		// CALLING METHOD FOR THE PURPOSE OF UC4
+		checkAvalabilityAndInsert(intializedBoard);
 	}
 
 }
