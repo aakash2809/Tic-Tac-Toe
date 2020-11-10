@@ -14,7 +14,7 @@ public class TicTacToeGame {
 	// MAIN METHOD
 	public static void main(String[] args) {
 		System.out.println("       Welcome to Tic Tac Toe      ");
-		System.out.println("---------------------------------------");
+		System.out.println("----------------------------------------");
 		// CALLING METHOD FOR THE PURPOSE OF UC1
 		char[] intializedBoard = initializeBoard();
 
